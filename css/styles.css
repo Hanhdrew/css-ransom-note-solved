@@ -1,6 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Piazzolla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Playwrite+HU:wght@100..400&family=Ponomar&display=swap");
+
+:root {
+  /* Primary Colors */
+  --color-one: hsl(190, 70%, 75%);
+  --color-two: hsl(10, 70%, 75%);
+  --color-three: #2a5747;
+  --color-four: #572a3e;
+
+  /* Background Colors */
+  --main-background: hsl(348, 51%, 5%);
+  --main-background-inverted: hsl(168, 51%, 5%);
+
+  /* Box Background Colors */
+  --box-background-one: rgb(51, 18, 22);
+  --box-background-two: rgb(18, 51, 45);
+  --box-background-three: rgba(11, 3, 6, 0.8);
+  --box-background-four: rgba(3, 11, 8, 0.5);
+
+  /* Shadow Colors */
+  --box-shadow-one: 0 0 10px 10px hsla(335, 77%, 26%, 0.8);
+  --box-shadow-two: 0 0 10px 10px hsla(155, 77%, 26%, 0.8);
+  --text-shadow-one: 0 0 5px hsl(335, 67%, 36%);
+  --text-shadow-two: 0 0 5px hsl(155, 67%, 36%);
+
+  /* Borders */
+  --border-one: 6px solid hsl(190, 40%, 75%);
+  --border-two: 8px double hsl(10, 40%, 75%);
+  --border-three: 6px dotted hsl(150, 41%, 42%);
+  --border-four: 8px dashed hsl(330, 41%, 42%);
+
+  /* Typography */
+  --font-16: 16px;
+  --font-32: 32px;
+  --font-48: 48px;
+  --font-64: 64px;
+  --weight-400: 400;
+  --weight-700: 700;
+  --weight-900: 900;
+}
 
 * {
   padding: 0;
@@ -19,9 +60,10 @@ body {
   padding: 100px;
   justify-content: center;
   align-items: center;
+  background-color: var(--main-background);
   color: white;
-  font-size: 20px;
-  background-color: #282a56;
+  font-size: 16px;
+  /* background-color: #282a56;  */
 }
 
 .container {
@@ -46,9 +88,17 @@ body {
   justify-content: center;
   max-width: 90px;
   max-height: 90px;
-  border: 6px solid grey;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+  /* border: 6px solid grey; */
+  /* box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2); */
   transition: all 0.8s ease-in-out;
+}
+
+span:nth-child(odd) {
+  font-family: "Poppins", sans-serif;
+}
+
+span:nth-child(even) {
+  font-family: "Big Shoulders", sans-serif;
 }
 
 /* Sample CSS for the WHY word */
@@ -57,248 +107,295 @@ body {
   font-size: 72px;
   font-weight: bold;
   color: aqua;
+  background-color: #2a5747;
+  border: 6px dashed maroon;
+  box-shadow: 2px 2px 5px 5px red;
+  text-shadow: 0 0 5px blue;
   text-decoration: underline;
   text-transform: uppercase;
-  font-family: 'Piazolla', sans-serif;
+  font-family: "Piazolla", sans-serif;
 }
 
 .whyHLetter {
   font-size: 30px;
   font-weight: bold;
   color: darkgoldenrod;
+  background-image: radial-gradient(red, blue);
+  border-radius: 10px;
+  border: 5px solid black;
   text-decoration: overline;
   text-transform: lowercase;
-  font-family: 'Ceviche One', sans-serif;
+  font-family: "Ceviche One", sans-serif;
 }
 
 .whyYLetter {
   font-size: 60px;
   font-weight: normal;
   color: coral;
+  background-color: #000;
+  border: 4px solid red;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Raleway Dots', sans-serif;
+  font-family: "Raleway Dots", sans-serif;
 }
 
 /* DID word */
 
-.didDLetter {
-}
-
-.didILetter {
-}
-
+.didDLetter,
+.didILetter,
 .didDTwoLetter {
+  color: tomato;
+  background-color: antiquewhite;
+  border: 3px solid magenta;
+  font-size: 24px;
+  font-weight: normal;
+  text-decoration: overline;
+  text-decoration-color: tomato;
+  text-transform: capitalize;
 }
 
 /* THE word */
 
-.theTLetter {
-}
-
-.theHLetter {
-}
-
+.theTLetter,
+.theHLetter,
 .theELetter {
+  color: var(--color-four);
+  background-color: var(--box-background-three);
+  border: var(--border-three);
+  box-shadow: var(--box-shadow-two);
+  font-size: var(--font-64);
+  font-style: italic;
+  text-transform: capitalize;
+  text-decoration: line-through;
+  text-decoration-color: var(--color-one);
+  text-shadow: var(--text-shadow-one);
 }
 
 /* FRONT-END word */
 
-.frontendFLetter {
-}
-
-.frontendRLetter {
-}
-
-.frontendOLetter {
-}
-
-.frontendNLetter {
-}
-
-.frontendTLetter {
-}
-
-.frontendELetter {
-}
-
-.frontendNTwoLetter {
-}
-
+.frontendFLetter,
+.frontendRLetter,
+.frontendOLetter,
+.frontendNLetter,
+.frontendTLetter,
+.frontendELetter,
+.frontendNTwoLetter,
 .frontendDLetter {
+  color: var(--color-one);
+  background-color: var(--box-background-two);
+  border: var(--border-one);
+  box-shadow: var(--box-shadow-one);
+  text-transform: lowercase;
+  font-weight: var(--weight-400);
+  font-size: var(--font-150);
 }
 
 /* DEVELOPER word */
 
-.developerDLetter {
-}
-.developerELetter {
-}
-.developerVLetter {
-}
-.developerETwoLetter {
-}
-.developerLLetter {
-}
-.developerOLetter {
-}
-.developerPLetter {
-}
-.developerEThreeLetter {
-}
+.developerDLetter,
+.developerELetter,
+.developerVLetter,
+.developerETwoLetter,
+.developerLLetter,
+.developerOLetter,
+.developerPLetter,
+.developerEThreeLetter,
 .developerRLetter {
+  color: var(--color-two);
+  background-color: var(--box-background-two);
+  border: var(--border-three);
+  box-shadow: var(--box-shadow-one);
+  font-size: var(--font-32);
+  font-weight: var(--weight-400);
+  text-decoration: overline;
+  text-decoration-color: var(--color-four);
+  text-shadow: var(--text-shadow-two);
 }
 
 /* TAKE word */
 
-.takeTLetter {
-}
-.takeALetter {
-}
-.takeKLetter {
-}
+.takeTLetter,
+.takeALetter,
+.takeKLetter,
 .takeELetter {
+  color: var(--color-three);
+  background-color: var(--box-background-one);
+  border: var(--border-two);
+  box-shadow: var(--box-shadow-one);
+  font-size: var(--font-48);
+  font-weight: var(--weight-700);
+  text-decoration: double;
+  text-decoration-color: var(--color-one);
+  text-shadow: var(--text-shadow-two);
 }
 
 /* UP word */
 
-.upULetter {
-}
+.upULetter,
 .upPLetter {
+  color: var(--color-one);
+  background-color: var(--box-background-four);
+  border: var(--border-four);
+  font-size: var(--font-16);
+  font-weight: var(--weight-400);
+  text-shadow: var(--text-shadow-two);
+  box-shadow: var(--box-shadow-one);
 }
 
 /* GARDENING word */
 
-.gardeningGLetter {
-}
-.gardeningALetter {
-}
-.gardeningRLetter {
-}
-.gardeningDLetter {
-}
-.gardeningELetter {
-}
-.gardeningNLetter {
-}
-.gardeningILetter {
-}
-.gardeningNTwoLetter {
-}
+.gardeningGLetter,
+.gardeningALetter,
+.gardeningRLetter,
+.gardeningDLetter,
+.gardeningELetter,
+.gardeningNLetter,
+.gardeningILetter,
+.gardeningNTwoLetter,
 .gardeningGTwoLetter {
+  color: var(--color-two);
+  background-color: var(--box-background-two);
+  border: var(--border-three);
+  box-shadow: var(--box-shadow-one);
+  text-shadow: var(--text-shadow-two);
+  font-size: var(--font-32);
 }
 
 /* BECAUSE word */
 
-.becauseBLetter {
-}
-.becauseELetter {
-}
-.becauseCLetter {
-}
-.becauseALetter {
-}
-.becauseULetter {
-}
-.becauseSLetter {
-}
+.becauseBLetter,
+.becauseELetter,
+.becauseCLetter,
+.becauseALetter,
+.becauseULetter,
+.becauseSLetter,
 .becauseETwoLetter {
+  color: var(--color-two);
+  background-color: var(--box-background-one);
+  border: var(--border-one);
+  text-shadow: var(--text-shadow-one);
+  box-shadow: var(--box-shadow-one);
+  font-size: var(--font-32);
+  font-weight: var(--weight-400);
+  text-decoration: underline;
+  text-transform: capitalize;
+  text-decoration-color: var(--color-one);
 }
 
 /* THEY word */
 
-.theyTLetter {
-}
-.theyHLetter {
-}
-.theyELetter {
-}
+.theyTLetter,
+.theyHLetter,
+.theyELetter,
 .theyYLetter {
+  color: var(--color-four);
+  background-color: var(--box-background-two);
+  border: var(--border-three);
+  box-shadow: var(--box-shadow-two);
+  text-shadow: var(--text-shadow-two);
+  font-size: var(--font-32);
+  font-weight: var(--weight-400);
+  font-style: italic;
 }
 
 /* WANTED word */
 
-.wantedWLetter {
-}
-.wantedALetter {
-}
-.wantedNLetter {
-}
-.wantedTLetter {
-}
-.wantedELetter {
-}
+.wantedWLetter,
+.wantedALetter,
+.wantedNLetter,
+.wantedTLetter,
+.wantedELetter,
 .wantedDLetter {
+  color: var(--color-two);
+  background-color: var(--box-background-two);
+  border: var(--border-four);
+  font-size: var(--font-16);
+  box-shadow: var(--box-shadow-two);
 }
 
 /* TO word */
 
-.toTLetter {
-}
+.toTLetter,
 .toOLetter {
+  color: var(--color-two);
+  background-color: var(--box-background-four);
+  border: var(--border-one);
+  font-size: var(--font-64);
+  text-shadow: var(--text-shadow-one);
+  box-shadow: var(--box-shadow-one);
 }
 
 /* IMPROVE word */
 
-.improveILetter {
-}
-.improveMLetter {
-}
-.improvePLetter {
-}
-.improveRLetter {
-}
-.improveOLetter {
-}
-.improveVLetter {
-}
+.improveILetter,
+.improveMLetter,
+.improvePLetter,
+.improveRLetter,
+.improveOLetter,
+.improveVLetter,
 .improveELetter {
+  color: var(--color-four);
+  background-color: var(--box-background-four);
+  border: var(--border-four);
+  font-size: var(--font-32);
+  font-weight: var(--weight-900);
+  text-decoration: underline;
+  text-decoration-color: var(--color-four);
 }
 
 /* THEIR word */
 
-.theirTLetter {
-}
-.theirHLetter {
-}
-.theirELetter {
-}
-.theirILetter {
-}
+.theirTLetter,
+.theirHLetter,
+.theirELetter,
+.theirILetter,
 .theirRLetter {
+  color: var(--color-one);
+  background-color: var(--box-background-one);
+  border: var(--border-two);
+  box-shadow: var(--box-shadow-one);
 }
 
 /* ROOT word */
 
-.rootRLetter {
-}
-.rootOLetter {
-}
-.rootOTwoLetter {
-}
+.rootRLetter,
+.rootOLetter,
+.rootOTwoLetter,
 .rootTLetter {
+  color: var(--color-two);
+  background-color: var(--box-background-two);
+  border: var(--border-four);
+  font-size: var(--font-16);
+  box-shadow: var(--box-shadow-two);
 }
 
 /* SKILLS word */
 
-.skillsSLetter {
-}
-.skillsKLetter {
-}
-.skillsILetter {
-}
-.skillsLLetter {
-}
-.skillsLTwoLetter {
-}
+.skillsSLetter,
+.skillsKLetter,
+.skillsILetter,
+.skillsLLetter,
+.skillsLTwoLetter,
 .skillsSTwoLetter {
+  color: var(--color-one);
+  background-color: var(--box-background-two);
+  border: var(--border-one);
+  box-shadow: var(--box-shadow-one);
+  text-transform: lowercase;
+  font-weight: var(--weight-400);
+  font-size: var(--font-16);
 }
 
 /* SYMBOLS */
 
-.hyphen {
-}
-.exclamation-mark {
-}
+.hyphen,
+.exclamation-mark,
 .question-mark {
+  color: var(--color-one);
+  background-color: var(--box-background-two);
+  border: var(--border-one);
+  box-shadow: var(--box-shadow-one);
+  text-transform: lowercase;
+  font-weight: var(--weight-400);
+  font-size: var(--font-16);
 }
